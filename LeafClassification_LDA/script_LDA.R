@@ -1,4 +1,4 @@
-setwd("D:/Rworkspace/KaggaleData/LeafClassification")
+setwd("D:/LeafClassification")
 getwd()
 
 library(psych)
@@ -68,9 +68,9 @@ massLDA=lda(species~.,data = trainPca[,-31])
 pred=predict(massLDA,newdata = testPca)
 pred$posterior
 
-solution1=as.data.frame(pred$posterior)
-solution1=cbind(id=testPca$id,solution1)
-write.csv(solution1,"solution1.csv",row.names = FALSE)
+solution=as.data.frame(pred$posterior)
+solution=cbind(id=testPca$id,solution1)
+write.csv(solution,"solution.csv",row.names = FALSE)
 
 
 
