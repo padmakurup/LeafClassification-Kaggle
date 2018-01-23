@@ -1,4 +1,4 @@
-setwd("D:/Rworkspace/KaggaleData/LeafClassification")
+setwd("D:/LeafClassification")
 getwd()
 
 library(psych)
